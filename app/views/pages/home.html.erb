@@ -1,0 +1,314 @@
+<% content_for :title, "Início - CISALV" %>
+<% content_for :description, "Consórcio Intermunicipal de Saúde Alto das Vertentes" %>
+
+<section class="hero">
+  <video class="hero-video" autoplay muted loop playsinline id="heroVideo">
+    <source src="/videos/fundo_0.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <h1>CISALV</h1>
+    <p class="subtitle">Consórcio Intermunicipal de Saúde Alto das Vertentes</p>
+    <p class="city">Ressaquinha - MG</p>
+  </div>
+</section>
+
+<section class="news-section">
+  <div class="container">
+    <h2 class="section-title">Notícias</h2>
+    <div class="news-grid">
+      <article class="news-featured">
+        <a href="#">
+          <span class="news-date">27 de Março de 2026</span>
+          <h3> Título da Notícia Principal</h3>
+          <p>Resumo da notícia mais recente e importante do CISALV. Aqui vai um texto descritivo sobre o conteúdo da publicação.</p>
+        </a>
+      </article>
+      <div class="news-list">
+        <article class="news-item">
+          <a href="#">
+            <span class="news-date">26 de Março de 2026</span>
+            <h4>Título da Notícia Anterior</h4>
+          </a>
+        </article>
+        <article class="news-item">
+          <a href="#">
+            <span class="news-date">25 de Março de 2026</span>
+            <h4>Título da Notícia Anterior</h4>
+          </a>
+        </article>
+        <article class="news-item">
+          <a href="#">
+            <span class="news-date">24 de Março de 2026</span>
+            <h4>Título da Notícia Anterior</h4>
+          </a>
+        </article>
+        <article class="news-item">
+          <a href="#">
+            <span class="news-date">23 de Março de 2026</span>
+            <h4>Título da Notícia Anterior</h4>
+          </a>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="departments-section">
+  <div class="container">
+    <h2 class="section-title">Programas</h2>
+    <div class="departments-grid departments-grid-6">
+      <div class="department-item" data-description="O CISALV realiza credenciamento para contratar prestadores de serviços de saúde, como exames, consultas especializadas, procedimentos médicos e cirurgias, atendendo aos 23 municípios consorciados.">
+        <div class="department-card">
+          <%= image_tag "programas/credenciamento.png", alt: "Credenciamento CISALV" %>
+          <h3>Credenciamento CISALV</h3>
+        </div>
+        <div class="department-expanded"></div>
+      </div>
+      <div class="department-item" data-description="Através do Programa TRANSPORTA-SUS, nossos veículos realizam o transporte diário de pacientes para clínicas, hospitais e laboratórios, garantindo transporte seguro e gratuito.">
+        <div class="department-card">
+          <%= image_tag "programas/transporta-sus.png", alt: "Transporta-SUS", class: "icon-tall" %>
+          <h3>Transporta-SUS</h3>
+        </div>
+        <div class="department-expanded"></div>
+      </div>
+      <div class="department-item" data-description="O Programa FarmaCis foi criado pela Secretaria de Estado de Saúde em parceria com o CISALV. Somos projeto piloto na criação e execução do programa, garantindo acesso aos medicamentos.">
+        <div class="department-card">
+          <%= image_tag "programas/farmacis.png", alt: "Farmacis" %>
+          <h3>Farmacis</h3>
+        </div>
+        <div class="department-expanded"></div>
+      </div>
+      <div class="department-item" data-description="A Central de Compras Compartilhadas do CISALV visa unir esforços dos municípios consorciados para adquirir bens e serviços de forma conjunta, proporcionando economia de escala.">
+        <div class="department-card">
+          <%= image_tag "programas/medicamentos.png", alt: "Central de Compras" %>
+          <h3>Central de Compras</h3>
+        </div>
+        <div class="department-expanded"></div>
+      </div>
+      <div class="department-item" data-description="O Programa VACIMÓVEL do CISALV oferece a immunization móvel para os municípios consorciados, com unidades móveis equipadas para realizar campanhas de vacinação.">
+        <div class="department-card">
+          <%= image_tag "programas/vacimovel.png", alt: "Vacimóvel" %>
+          <h3>Vacimóvel</h3>
+        </div>
+        <div class="department-expanded"></div>
+      </div>
+      <div class="department-item" data-description="O Programa VISA-CIS visa fortalecer as ações de vigilância sanitária nos municípios consorciados, oferecendo apoio técnico e operacional para garantir a segurança sanitária.">
+        <div class="department-card">
+          <%= image_tag "programas/visacis.png", alt: "Visacis" %>
+          <h3>Visacis</h3>
+        </div>
+        <div class="department-expanded"></div>
+      </div>
+    </div>
+    <div class="department-description" id="departmentDescription">
+      <p>Passe o mouse sobre um programa para saber mais.</p>
+    </div>
+  </div>
+</section>
+
+<section class="categories-section">
+  <div class="container">
+    <h2 class="section-title">Navegue por Categoria</h2>
+    <p class="categories-subtitle">Encontre o serviço ou informação desejada pelas opções abaixo:</p>
+    <div class="categories-grid">
+      <a href="/legislacao" class="category-card">
+        <span class="material-icons">gavel</span>
+        <h3>Legislação</h3>
+      </a>
+      <a href="/compras" class="category-card">
+        <span class="material-icons">shopping_basket</span>
+        <h3>Compras Públicas</h3>
+      </a>
+      <a href="/contabilidade" class="category-card">
+        <span class="material-icons">payments</span>
+        <h3>Contabilidade</h3>
+      </a>
+      <a href="/obras" class="category-card">
+        <span class="material-icons">engineering</span>
+        <h3>Obras</h3>
+      </a>
+      <a href="/transparencia" class="category-card">
+        <span class="material-icons">manage_search</span>
+        <h3>Transparência</h3>
+      </a>
+      <a href="/municipios" class="category-card">
+        <span class="material-icons">location_city</span>
+        <h3>Municípios</h3>
+      </a>
+      <a href="/imprensa" class="category-card">
+        <span class="material-icons">newspaper</span>
+        <h3>Imprensa Oficial</h3>
+      </a>
+      <a href="/concurso" class="category-card">
+        <span class="material-icons">quiz</span>
+        <h3>Concurso Público</h3>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="stats-section" id="statsSection">
+  <div class="container">
+    <h2 class="stats-title">Desempenho do Serviços</h2>
+    <div class="stats-grid">
+      <div class="stat-item">
+        <span class="stat-number" data-target="103">0</span>
+        <span class="stat-label">Clínicas Cadastradas</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="26">0</span>
+        <span class="stat-label">Municípios Consorciados</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="16" data-prefix="R$" data-suffix=" Milhões">0</span>
+        <span class="stat-label">Investidos em Saúde</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="25">0</span>
+        <span class="stat-label">Ônibus em Rota</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="instagram-section">
+  <div class="container">
+    <h2 class="section-title">Últimas do Instagram</h2>
+    <div class="instagram-carousel" id="instagramCarousel">
+      <% if @instagram_posts.any? %>
+        <% @instagram_posts.each do |post| %>
+          <a href="<%= post[:permalink] %>" target="_blank" class="instagram-card">
+            <div class="instagram-image" style="background-image: url('<%= post[:media_url] %>')"></div>
+            <div class="instagram-content">
+              <p class="instagram-caption"><%= post[:caption].to_s.truncate(60) %></p>
+              <span class="instagram-date"><%= post[:timestamp].to_s.to_datetime.strftime('%d/%m') %></span>
+            </div>
+          </a>
+        <% end %>
+      <% else %>
+        <% (1..6).each do |i| %>
+          <div class="instagram-card placeholder">
+            <div class="instagram-image"></div>
+            <div class="instagram-content">
+              <p class="instagram-caption">Post do Instagram #<%= i %></p>
+              <span class="instagram-date">Carregando...</span>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+    <div class="instagram-footer">
+      <a href="https://instagram.com/cisalv" target="_blank" class="instagram-link">
+        <span class="material-icons">camera_alt</span>
+        Siga-nos no Instagram
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var video = document.getElementById('heroVideo');
+    if (video) {
+      var randomIndex = Math.floor(Math.random() * 17);
+      video.src = '/videos/fundo_' + randomIndex + '.mp4';
+      video.load();
+    }
+
+    var cards = document.querySelectorAll('.department-card');
+    var descBox = document.getElementById('departmentDescription');
+
+    function isMobile() {
+      return window.innerWidth <= 768;
+    }
+
+    if (isMobile()) {
+      cards.forEach(function(card) {
+        card.addEventListener('click', function(e) {
+          e.preventDefault();
+          var item = this.closest('.department-item');
+          var desc = item.getAttribute('data-description');
+          var expanded = item.querySelector('.department-expanded');
+
+          document.querySelectorAll('.department-item').forEach(function(i) {
+            if (i !== item) {
+              i.classList.remove('active');
+              i.querySelector('.department-expanded').innerHTML = '';
+            }
+          });
+
+          if (item.classList.contains('active')) {
+            item.classList.remove('active');
+            expanded.innerHTML = '';
+          } else {
+            item.classList.add('active');
+            expanded.innerHTML = '<p>' + desc + '</p>';
+          }
+        });
+      });
+    } else {
+      cards.forEach(function(card) {
+        card.addEventListener('mouseenter', function() {
+          var desc = this.closest('.department-item').getAttribute('data-description');
+          if (desc && descBox) {
+            descBox.innerHTML = '<p>' + desc + '</p>';
+            descBox.classList.add('has-content');
+          }
+        });
+
+        card.addEventListener('mouseleave', function() {
+          if (descBox) {
+            descBox.innerHTML = '<p>Passe o mouse sobre um programa para saber mais.</p>';
+            descBox.classList.remove('has-content');
+          }
+        });
+      });
+    }
+
+    // Stats Counter Animation
+    var statsSection = document.getElementById('statsSection');
+    var hasAnimated = false;
+
+    function easeOutExpo(t) {
+      return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
+    }
+
+    function animateCounters() {
+      if (hasAnimated) return;
+      var statNumbers = document.querySelectorAll('.stat-number');
+      statNumbers.forEach(function(counter) {
+        var target = parseInt(counter.getAttribute('data-target'));
+        var prefix = counter.getAttribute('data-prefix') || '';
+        var suffix = counter.getAttribute('data-suffix') || '';
+        var duration = 2000;
+        var startTime = performance.now();
+
+        function updateCounter(currentTime) {
+          var elapsed = currentTime - startTime;
+          var progress = Math.min(elapsed / duration, 1);
+          var easedProgress = easeOutExpo(progress);
+          var current = Math.floor(target * easedProgress);
+          counter.textContent = prefix + current + suffix;
+
+          if (progress < 1) {
+            requestAnimationFrame(updateCounter);
+          }
+        }
+
+        requestAnimationFrame(updateCounter);
+      });
+      hasAnimated = true;
+    }
+
+    function checkStatsInView() {
+      var rect = statsSection.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        animateCounters();
+      }
+    }
+
+    window.addEventListener('scroll', checkStatsInView);
+    checkStatsInView();
+  });
+</script>

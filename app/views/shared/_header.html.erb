@@ -1,0 +1,160 @@
+<div class="fixed-header">
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="logo">
+        <%= image_tag "logo_cisalv_path_branco.svg", alt: "CISALV" %>
+      </a>
+      <div class="header-right">
+        <div class="compliance-dropdown">
+          <button class="compliance-btn">Compliance <span class="arrow">▼</span></button>
+          <div class="compliance-menu">
+            <a href="#" class="compliance-item">I - Lista atualizada dos entes consorciados</a>
+            <a href="#" class="compliance-item">II - Protocolo de Intenções e/ou contrato de consórcio e Estatuto do consórcio</a>
+            <a href="#" class="compliance-item">III - Contratos de programa e rateio dos entes consorciados</a>
+            <a href="#" class="compliance-item">IV - Serviços e procedimentos de saúde ofertados, com a indicação dos valores praticados</a>
+            <a href="#" class="compliance-item">V - Demonstrativo anual e mensal da produção dos serviços e procedimentos realizados pelo consórcio</a>
+            <a href="#" class="compliance-item">VI - Programas estaduais e nacionais que o consórcio aderir, com informações de objetos, valores, metas e indicadores</a>
+            <a href="#" class="compliance-item">VII - Gestão de pessoal, incluindo a folha de pagamento mensal</a>
+            <a href="#" class="compliance-item">VIII - Dados de receita e despesas, contendo a execução orçamentária e financeira</a>
+            <a href="#" class="compliance-item">IX - Licitações, contratos, compras e contratações públicas</a>
+            <a href="#" class="compliance-item">X - Estrutura organizacional e atribuições, incluindo a lista dos principais cargos e seus respectivos ocupantes</a>
+            <a href="#" class="compliance-item">XII - Endereços e telefones de suas unidades e horários de atendimento ao público</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="main-menu-bar" id="mainMenuBar">
+    <div class="container">
+      <div class="menu-header">
+        <button class="menu-toggle-btn" id="menuToggleBtn">
+          <span class="menu-icon">☰</span>
+          <span>Menu</span>
+        </button>
+        <div class="menu-search">
+          <input type="text" placeholder="Pesquisar..." class="search-input">
+          <button class="search-btn">🔍</button>
+        </div>
+      </div>
+      <div class="menu-content" id="menuContent">
+        <div class="menu-grid">
+          <div class="menu-column">
+            <a href="/institucional" class="menu-item-title">Institucional</a>
+            <a href="/institucional/contrato" class="menu-item">Contrato de Consórcio Público</a>
+            <a href="/institucional/leis" class="menu-item">Leis Municipais de Ratificação</a>
+            <a href="/institucional/estatuto" class="menu-item">Estatuto Consolidado do CISALV</a>
+          </div>
+          <div class="menu-column">
+            <a href="/compras" class="menu-item-title">Compras Públicas</a>
+            <a href="/compras/licitacoes" class="menu-item">Licitações</a>
+            <a href="/compras/cotacao-8666" class="menu-item">Cotação Eletrônica Dispensa Lei 8.666/93</a>
+            <a href="/compras/cotacao-14133" class="menu-item">Cotação Eletrônica Lei 14.133/2021</a>
+            <a href="/compras/contratos" class="menu-item">Contratos</a>
+            <a href="/compras/atas" class="menu-item">Atas de Registro de Preços</a>
+          </div>
+          <div class="menu-column">
+            <a href="/imprensa" class="menu-item-title">Imprensa Oficial</a>
+            <a href="/imprensa/diario-cisalv" class="menu-item">Diário Oficial do CISALV (e-DOC)</a>
+            <a href="/imprensa/diario-barbacena" class="menu-item">Diário Oficial de Barbacena (e-DOC)</a>
+          </div>
+          <div class="menu-column">
+            <a href="/concursos" class="menu-item-title">Concursos</a>
+            <a href="/concursos/publico" class="menu-item">Concurso Público</a>
+            <a href="/concursos/jcm" class="menu-item">JCM</a>
+            <a href="/concursos/exame" class="menu-item">EXAME</a>
+          </div>
+          <div class="menu-column">
+            <a href="/outros" class="menu-item-title">Outros</a>
+            <a href="/quem-somos" class="menu-item">Quem Somos</a>
+            <a href="/municipios" class="menu-item">Municípios</a>
+            <a href="/contabilidade" class="menu-item">Contabilidade</a>
+            <a href="/transparencia" class="menu-item">Transparência</a>
+            <a href="/obras" class="menu-item">Obras</a>
+            <a href="/contracheque" class="menu-item">Contracheque</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<div class="mobile-nav-bar" id="mobileNavBar">
+  <div class="container">
+    <button class="mobile-nav-btn" id="mobileMenuBtn">
+      <span class="mobile-nav-icon">☰</span>
+      <span>Menu</span>
+    </button>
+    <button class="mobile-nav-btn mobile-nav-btn-compliance" id="mobileComplianceBtn">
+      <span class="mobile-nav-icon">☰</span>
+      <span>Compliance</span>
+    </button>
+    <button class="mobile-search-toggle" id="mobileSearchToggle">
+      <span class="mobile-nav-icon">🔍</span>
+    </button>
+    <div class="mobile-search-bar" id="mobileSearchBar">
+      <input type="text" placeholder="Pesquisar..." class="mobile-search-input">
+      <button class="mobile-search-close" id="mobileSearchClose">✕</button>
+    </div>
+  </div>
+</div>
+
+<div class="mobile-menu-overlay" id="mobileMenuOverlay">
+  <div class="mobile-menu-panel" id="mobileMenuPanel">
+    <div class="mobile-menu-header">
+      <span>Menu</span>
+      <button class="mobile-menu-close" id="mobileMenuClose">✕</button>
+    </div>
+    <div class="mobile-menu-content">
+      <a href="/institucional" class="mobile-menu-title">Institucional</a>
+      <a href="/institucional/contrato" class="mobile-menu-link">Contrato de Consórcio Público</a>
+      <a href="/institucional/leis" class="mobile-menu-link">Leis Municipais de Ratificação</a>
+      <a href="/institucional/estatuto" class="mobile-menu-link">Estatuto Consolidado do CISALV</a>
+
+      <a href="/compras" class="mobile-menu-title">Compras Públicas</a>
+      <a href="/compras/licitacoes" class="mobile-menu-link">Licitações</a>
+      <a href="/compras/cotacao-8666" class="mobile-menu-link">Cotação Lei 8.666/93</a>
+      <a href="/compras/cotacao-14133" class="mobile-menu-link">Cotação Lei 14.133/2021</a>
+      <a href="/compras/contratos" class="mobile-menu-link">Contratos</a>
+      <a href="/compras/atas" class="mobile-menu-link">Atas de Registro de Preços</a>
+
+      <a href="/imprensa" class="mobile-menu-title">Imprensa Oficial</a>
+      <a href="/imprensa/diario-cisalv" class="mobile-menu-link">Diário do CISALV</a>
+      <a href="/imprensa/diario-barbacena" class="mobile-menu-link">Diário de Barbacena</a>
+
+      <a href="/concursos" class="mobile-menu-title">Concursos</a>
+      <a href="/concursos/publico" class="mobile-menu-link">Concurso Público</a>
+      <a href="/concursos/jcm" class="mobile-menu-link">JCM</a>
+      <a href="/concursos/exame" class="mobile-menu-link">EXAME</a>
+
+      <a href="/quem-somos" class="mobile-menu-title">Quem Somos</a>
+      <a href="/municipios" class="mobile-menu-title">Municípios</a>
+      <a href="/contabilidade" class="mobile-menu-title">Contabilidade</a>
+      <a href="/transparencia" class="mobile-menu-title">Transparência</a>
+      <a href="/obras" class="mobile-menu-title">Obras</a>
+      <a href="/contracheque" class="mobile-menu-title">Contracheque</a>
+    </div>
+  </div>
+</div>
+
+<div class="mobile-compliance-overlay" id="mobileComplianceOverlay">
+  <div class="mobile-menu-panel" id="mobileCompliancePanel">
+    <div class="mobile-menu-header">
+      <span>Compliance</span>
+      <button class="mobile-menu-close" id="mobileComplianceClose">✕</button>
+    </div>
+    <div class="mobile-menu-content">
+      <a href="#" class="compliance-item">I - Lista atualizada dos entes consorciados</a>
+      <a href="#" class="compliance-item">II - Protocolo de Intenções e/ou contrato de consórcio e Estatuto do consórcio</a>
+      <a href="#" class="compliance-item">III - Contratos de programa e rateio dos entes consorciados</a>
+      <a href="#" class="compliance-item">IV - Serviços e procedimentos de saúde ofertados</a>
+      <a href="#" class="compliance-item">V - Demonstrativo anual e mensal da produção</a>
+      <a href="#" class="compliance-item">VI - Programas estaduais e nacionais</a>
+      <a href="#" class="compliance-item">VII - Gestão de pessoal, incluindo a folha de pagamento mensal</a>
+      <a href="#" class="compliance-item">VIII - Dados de receita e despesas</a>
+      <a href="#" class="compliance-item">IX - Licitações, contratos, compras e contratações públicas</a>
+      <a href="#" class="compliance-item">X - Estrutura organizacional e atribuições</a>
+      <a href="#" class="compliance-item">XII - Endereços e telefones de suas unidades</a>
+    </div>
+  </div>
+</div>

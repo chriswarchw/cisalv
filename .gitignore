@@ -1,0 +1,40 @@
+# Ignore Rails defaults
+/log/*.log
+/tmp/
+.DS_Store
+.byebug_history
+
+# Ignore uploads and cache
+/public/uploads
+/storage
+/tmp/cache
+
+# Ignore node_modules (if using)
+# node_modules/
+
+# Ignore environment files with secrets
+.env
+.env.*
+!.env.example
+
+# Ignore database config with password
+config/database.yml
+
+# Ignore JSON files with credentials
+config/diario-service-account.json
+
+# Ignore bundler config
+.bundle/
+
+# Ignore IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Ignore coverage
+coverage/
+
+# Ignore system files
+*.ico
+*.pyc
