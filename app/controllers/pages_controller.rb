@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   def home
+    @noticias = Noticia.list_publicadas.limit(5)
     @instagram_posts = fetch_instagram_posts
   end
 

@@ -1,0 +1,52 @@
+<% content_for :title, "Notícias - CISALV" %>
+<% content_for :description, "Notícias do Consórcio Intermunicipal de Saúde Alto das Vertentes" %>
+
+<section class="page-header">
+  <div class="container">
+    <h1>Notícias</h1>
+    <p class="page-subtitle">Últimas notícias e atualizações do CISALV</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <% if @noticias.empty? %>
+      <div class="empty-state">
+        <p>Nenhuma notícia encontrada.</p>
+      </div>
+    <% else %>
+      <div class="news-grid">
+        <% if @noticias.current_page == 1 && @noticias[0] %>
+          <% 
+          conteudo = @noticias.first.conteudo_dinamico.to_s
+          img_matches = conteudo.match(/<img[^>]+src="(https?:\/\/lh7-rt[^"]+)"/)
+          primeira_imagem = img_matches ? img_matches[1] : "/imgs/contratos.png"
+          %>
+          <article class="news-featured" style="background-image: linear-gradient(rgba(240,248,255,0.92), rgba(240,248,255,0.92)), url('<%= primeira_imagem %>')">
+            <a href="<%= "/noticias/#{@noticias.first.slug}" %>">
+              <span class="news-date"><%= l @noticias.first.data_publicacao, format: :long if @noticias.first.data_publicacao %></span>
+              <h3><%= @noticias.first.titulo %></h3>
+              <div class="news-featured-content">
+                <%= sanitize(@noticias.first.conteudo_dinamico.to_s.gsub(/<[^>]*>/, ' ').squish[0..200], tags: []) %>...
+              </div>
+            </a>
+          </article>
+        <% end %>
+        <div class="news-list">
+          <% (@noticias.current_page == 1 ? @noticias[1..] : @noticias).each do |noticia| %>
+            <article class="news-item">
+              <a href="<%= "/noticias/#{noticia.slug}" %>">
+                <span class="news-date"><%= l noticia.data_publicacao, format: :long if noticia.data_publicacao %></span>
+                <h4><%= noticia.titulo %></h4>
+              </a>
+            </article>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="pagination">
+        <%= paginate @noticias %>
+      </div>
+    <% end %>
+  </div>
+</section>

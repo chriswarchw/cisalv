@@ -1,0 +1,25 @@
+<% content_for :title, "#{@noticia.titulo} - CISALV" %>
+<% content_for :description, @noticia.resumo || @noticia.conteudo_html.to_s.truncate(160) %>
+
+<section class="page-header">
+  <div class="container">
+    <a href="/noticias" class="back-link">← Voltar para Notícias</a>
+    <h1><%= @noticia.titulo %></h1>
+    <p class="page-subtitle">
+      <span class="news-date"><%= l @noticia.data_publicacao, format: :long if @noticia.data_publicacao %></span>
+      <% if @noticia.autor %>
+        <span class="news-author"> | Por <%= @noticia.autor %></span>
+      <% end %>
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <article class="news-content">
+      <div class="news-body">
+        <%= sanitize @noticia.conteudo_dinamico, tags: %w[p span br strong em u a img table td th tr ul ol li h1 h2 h3 hr], attributes: %w[href src alt] %>
+      </div>
+    </article>
+  </div>
+</section>

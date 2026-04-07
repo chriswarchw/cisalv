@@ -15,41 +15,43 @@
 
 <section class="news-section">
   <div class="container">
-    <h2 class="section-title">Notícias</h2>
+    <h2 class="section-title">
+      Notícias
+      <a href="/noticias" class="section-link">Ver todas as notícias →</a>
+    </h2>
     <div class="news-grid">
-      <article class="news-featured">
-        <a href="#">
-          <span class="news-date">27 de Março de 2026</span>
-          <h3> Título da Notícia Principal</h3>
-          <p>Resumo da notícia mais recente e importante do CISALV. Aqui vai um texto descritivo sobre o conteúdo da publicação.</p>
-        </a>
-      </article>
-      <div class="news-list">
-        <article class="news-item">
-          <a href="#">
-            <span class="news-date">26 de Março de 2026</span>
-            <h4>Título da Notícia Anterior</h4>
+      <% if @noticias && @noticias.any? %>
+        <% 
+        conteudo = @noticias.first.conteudo_dinamico.to_s rescue ""
+        img_matches = conteudo.match(/<img[^>]+src="(https?:\/\/lh7-rt[^"]+)"/)
+        primeira_imagem = img_matches ? img_matches[1] : "/imgs/contratos.png"
+        texto_preview = sanitize(conteudo.gsub(/<[^>]*>/, ' ').squish[0..150], tags: []) rescue ""
+        %>
+        <article class="news-featured" style="background-image: linear-gradient(rgba(240,248,255,0.92), rgba(240,248,255,0.92)), url('<%= primeira_imagem %>')">
+          <a href="<%= "/noticias/#{@noticias.first.slug}" %>">
+            <span class="news-date"><%= l @noticias.first.data_publicacao, format: :long if @noticias.first.data_publicacao %></span>
+            <h3><%= @noticias.first.titulo %></h3>
+            <div class="news-featured-content"><%= texto_preview %>...</div>
           </a>
         </article>
-        <article class="news-item">
+        <div class="news-list">
+          <% @noticias.offset(1).limit(4).each do |noticia| %>
+            <article class="news-item">
+              <a href="<%= "/noticias/#{noticia.slug}" %>">
+                <span class="news-date"><%= l noticia.data_publicacao, format: :long if noticia.data_publicacao %></span>
+                <h4><%= noticia.titulo %></h4>
+              </a>
+            </article>
+          <% end %>
+        </div>
+      <% else %>
+        <article class="news-featured">
           <a href="#">
-            <span class="news-date">25 de Março de 2026</span>
-            <h4>Título da Notícia Anterior</h4>
+            <span class="news-date">Em breve</span>
+            <h3>Nenhuma notícia disponível no momento</h3>
           </a>
         </article>
-        <article class="news-item">
-          <a href="#">
-            <span class="news-date">24 de Março de 2026</span>
-            <h4>Título da Notícia Anterior</h4>
-          </a>
-        </article>
-        <article class="news-item">
-          <a href="#">
-            <span class="news-date">23 de Março de 2026</span>
-            <h4>Título da Notícia Anterior</h4>
-          </a>
-        </article>
-      </div>
+      <% end %>
     </div>
   </div>
 </section>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2026_03_27_164124) do
+ActiveRecord::Schema[7.2].define(version: 2026_04_07_131732) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_trgm"
   enable_extension "plpgsql"
@@ -39,5 +39,25 @@ ActiveRecord::Schema[7.2].define(version: 2026_03_27_164124) do
     t.index ["processado"], name: "index_diarios_on_processado"
     t.index ["search_vector"], name: "index_diarios_on_search_vector", using: :gin
     t.index ["titulo"], name: "index_diarios_on_titulo", opclass: :gin_trgm_ops, using: :gin
+  end
+
+  create_table "noticias", force: :cascade do |t|
+    t.string "google_doc_id", null: false
+    t.string "titulo"
+    t.text "conteudo_html"
+    t.text "resumo"
+    t.string "imagem_destaque"
+    t.string "autor"
+    t.datetime "data_publicacao"
+    t.boolean "publicado", default: true
+    t.integer "ordem", default: 0
+    t.tsvector "search_vector"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "slug"
+    t.index ["data_publicacao"], name: "index_noticias_on_data_publicacao"
+    t.index ["google_doc_id"], name: "index_noticias_on_google_doc_id", unique: true
+    t.index ["publicado"], name: "index_noticias_on_publicado"
+    t.index ["search_vector"], name: "index_noticias_on_search_vector", using: :gin
   end
 end
