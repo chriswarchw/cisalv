@@ -20,6 +20,10 @@
 # Ignore database config with password
 config/database.yml
 
+# Ignore credentials and keys
+config/master.key
+config/credentials.yml.enc
+
 # Ignore JSON files with credentials
 config/diario-service-account.json
 
