@@ -16,11 +16,6 @@
 .env
 .env.*
 !.env.example
-
-# Ignore database config with password
-config/database.yml
-
-# Ignore JSON files with credentials
 config/diario-service-account.json
 
 # Ignore bundler config
